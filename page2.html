@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+    <script src="https://kit.fontawesome.com/43798b0c81.js" crossorigin="anonymous"></script>
+
+
+    <script src="https://kit.fontawesome.com/43798b0c81.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet">
+
+    <script src="assets/js/pjax.js"></script>
+    <script src="assets/js/layout.js"></script>
+    <link href="assets/css/default.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="nav-placeholder">
+
+    </div>
+
+    <div id="wrapper">
+        <div id="menuContainer" class="shadowContainer">
+
+
+
+        </div>
+
+
+        <div id="contentContainer" class="shadowContainer">
+        </div>
+
+
+        <div id="contentWrapperContainer">
+            <div class="contentWrapper" menu="0">
+
+                <h1>1. UTP 케이블 만들기</h1>
+
+
+                <div class="pg">
+                    <ol style="font-size: 1.8rem;">
+                        <li>
+                            피복탈피기로 양쪽 케이블의 피복을 1~2바퀴 돌려서 벗겨낸다.
+                        </li>
+                        <li>
+                            색깔 별로 케이블 선을 풀어주고 난 뒤 배열한다. (2번째 탭 참조)
+                        </li>
+                        <li>
+                            길이가 들쭉날쭉한 배열된 선 끝의 일부를 잘라낸다.
+                        </li>
+                        <li>
+                            RJ-45 커넥터에 끼운 뒤 랜툴로 찝어준다.
+                        </li>
+                        <li>
+                            반대쪽도 2~4번을 반복해준다.
+                        </li>
+                        <li>
+                            테스트기에 꽂아서 불이 순서대로 들어오는지 확인한다.
+                        </li>
+
+
+
+
+                    </ol>
+
+
+                </div>
+
+
+
+
+            </div>
+
+            <div class="contentWrapper" menu="1">
+
+                <h1>2. 케이블 색 배열</h1>
+
+
+                <div class="pg">
+                    <h2>
+                        케이블의 종류
+                    </h2>
+
+                    <ul>
+                        <li>
+                            다이렉트 케이블
+                            <h4>허브-PC / 라우터-허브</h4>
+                        </li>
+                        <li>
+                            크로스 케이블
+                            <h4>
+                                허브-허브 / PC-PC / 라우터-라우터 / 라우터-PC
+                            </h4>
+                        </li>
+                    </ul>
+
+                    <h2>
+                        다이렉트 케이블
+                    </h2>
+
+                    <ul>
+                        <li>
+
+                            <img src="assets/images/direct.png" width="500px">
+
+
+                        </li>
+                    </ul>
+
+                    <h2>
+                        크로스 케이블
+                    </h2>
+
+                    <ul>
+                        <li>
+
+                            <img src="assets/images/cross.png" width="500px">
+
+
+                        </li>
+                    </ul>
+
+
+                  
+
+                </div>
+            </div>
+
+        
+
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+
+        (() => {
+
+            let selectedMenu = 0;
+
+            function selectedMenuChanged() {
+                $("#contentContainer").html("");
+                $("#contentContainer").append(
+                    $(`.contentWrapper[menu=${selectedMenu}]`).html()
+                );
+
+                $(".menu").css("background-color", "#007bff");
+                $(`.menu[menu=${selectedMenu}]`).css("background-color", "purple");
+
+            }
+
+            $(document).ready(function () {
+                selectedMenuChanged();
+            })
+
+            $("#menuContainer").html("");
+
+
+            $("#contentWrapperContainer").hide();
+
+            $('.contentWrapper').each(function (index, item) {
+                $("#menuContainer").append(
+                    `
+                    <div class="menu badge  badge-primary" menu=${index}>
+                        ${index + 1}
+                    </div>
+
+                    `
+
+
+                );
+            })
+
+
+            $(".menu").on("click", function () {
+                selectedMenu = $(this).attr("menu") * 1;
+                selectedMenuChanged();
+            })
+
+
+
+
+
+        })();
+
+    </script>
+
+
+
+</body>
+
+</html>

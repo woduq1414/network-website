@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+    <script src="https://kit.fontawesome.com/43798b0c81.js" crossorigin="anonymous"></script>
+
+
+    <script src="https://kit.fontawesome.com/43798b0c81.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet">
+
+    <script src="assets/js/pjax.js"></script>
+    <script src="assets/js/layout.js"></script>
+    <link href="assets/css/default.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="nav-placeholder">
+
+    </div>
+
+    <div id="wrapper">
+        <div id="menuContainer" class="shadowContainer">
+
+
+
+        </div>
+
+
+        <div id="contentContainer" class="shadowContainer">
+        </div>
+
+
+        <div id="contentWrapperContainer">
+            <div class="contentWrapper" menu="0">
+
+                <h1>1. 네트워크 속성</h1>
+
+
+                <div class="pg">
+                    <ol style="font-size: 1.8rem;text-align: center;">
+                        <img src="assets/images/1-1.png" class="solveImage">
+
+                        <li>
+                            <img src="assets/images/1-2.png" class="solveImage">
+                            <h2>ipv4 선택</h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/1-3.png" class="solveImage">
+                            <h2>
+                                (서브넷 마스크의 마지막 자리) = 256 - (호스트 수)
+                                <br>
+                                6보다 크면서 가장 가까운 8(2의 3승)이 호스트 수가 되고, 256 - 8 = 248 
+
+                            </h2>
+                        </li>
+                        
+                    </ol>
+
+                    
+                </div>
+                
+
+
+
+
+
+            </div>
+            <div class="contentWrapper" menu="1">
+
+                <h1>2. DHCP 서버</h1>
+
+
+                <div class="pg">
+                    <ol style="font-size: 1.8rem;text-align: center;">
+                        <img src="assets/images/2-1.png" class="solveImage">
+
+                        <li>
+                            <img src="assets/images/2-2.png" class="solveImage">
+                            <h2>IPv4 -> 새 범위</h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/2-3.png" class="solveImage">
+                            <h2>
+                                범위 이름 설정
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/2-4.png" class="solveImage">
+                            <h2>
+                                IP 주소 범위 설정
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/2-5.png" class="solveImage">
+                            <h2>
+                                제외 주소 범위 추가
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/2-6.png" class="solveImage">
+                            <h2>
+                                임대 기간 변경
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/2-7.png" class="solveImage">
+                            <h2>
+                                게이트웨이 주소 추가
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/2-8.png" class="solveImage">
+                            <h2>
+                                DNS 서버 주소 추가
+                            </h2>
+                        </li>
+                        
+                        
+                    </ol>
+
+                    
+                </div>
+                
+
+
+
+
+
+            </div>
+            <div class="contentWrapper" menu="2">
+
+                <h1>3. 웹사이트 추가</h1>
+
+
+                <div class="pg">
+                    <ol style="font-size: 1.8rem;text-align: center;">
+                        <img src="assets/images/3-1.png" class="solveImage">
+
+                        <li>
+                            <img src="assets/images/3-2.png" class="solveImage">
+                            <h2>사이트 -> 웹 사이트 추가</h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/3-3.png" class="solveImage">
+                            <h2>
+                                제시된 정보대로 웹 사이트 두 개 추가
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/3-4.png" class="solveImage">
+                            <h2>
+                                두 사이트가 같은 IP를 사용하기 위해 바인딩 편집을 함
+                                <br>
+                                ICQA 오른쪽 클릭 -> 바인딩 편집 (Korea에 해도 상관 없음)
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/3-5.png" class="solveImage">
+                            <h2>
+                                IP 주소, 포트 입력
+                                호스트 이름에는 다른 사이트의 호스트 이름(여기서는 www.korea.co.kr) 입력
+                            </h2>
+                        </li>
+                        
+                    </ol>
+
+                    
+                </div>
+                
+
+
+
+
+
+            </div>
+            <div class="contentWrapper" menu="3">
+
+                <h1>4. DNS 서버</h1>
+
+
+                <div class="pg">
+                    <ol style="font-size: 1.8rem;text-align: center;">
+                        <img src="assets/images/4-1.png" class="solveImage">
+
+                        <li>
+                            <img src="assets/images/4-2.png" class="solveImage">
+                            <h2>정방향 조회 영역 -> 새 영역</h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/4-3.png" class="solveImage">
+                            <h2>
+                                영역 이름 입력
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/4-4.png" class="solveImage">
+                            <h2>
+                                새로 만들어진 영역에 우클릭 -> 속성
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/4-5.png" class="solveImage">
+                            <h2>
+                                SOA 탭에서, 일련 번호, 주 서버, 책임자 주어진 대로 입력
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/4-6.png" class="solveImage">
+                            <h2>
+                                영역에 우클릭 -> 새 호스트(A 또는 AAAA)
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/4-7.png" class="solveImage">
+                            <h2>
+                                A 레코드 추가
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/4-8.png" class="solveImage">
+                            <h2>
+                                영역에 우클릭 -> 새 별칭(CNAME)
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/4-9.png" class="solveImage">
+                            <h2>
+                                CNAME 레코드 추가
+                            </h2>
+                        </li>
+                        
+                    </ol>
+
+                    
+                </div>
+                
+
+
+
+
+
+            </div>
+            <div class="contentWrapper" menu="4">
+
+                <h1>5. 로컬 보안 정책</h1>
+
+
+                <div class="pg">
+                    <ol style="font-size: 1.8rem;text-align: center;">
+                        <img src="assets/images/5-1.png" class="solveImage">
+
+                        <li>
+                            <img src="assets/images/5-2.png" class="solveImage">
+                            <h2>대화형 로그온 : [Ctrl+Alt+Del]를 사용할 필요 없음 선택</h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/5-3.png" class="solveImage">
+                            <h2>
+                                사용 안 함으로 변경
+                            </h2>
+                        </li>
+                        
+                    </ol>
+
+                    
+                </div>
+                
+
+
+
+
+
+            </div>
+            <div class="contentWrapper" menu="5">
+
+                <h1>6. Hyper-V</h1>
+
+
+                <div class="pg">
+                    <ol style="font-size: 1.8rem;text-align: center;">
+                        <img src="assets/images/6-1.png" class="solveImage">
+
+                        <li>
+                            <img src="assets/images/6-2.png" class="solveImage">
+                            <h2>새로 만들기 -> 가상 컴퓨터</h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/6-3.png" class="solveImage">
+                            <h2>
+                                이름 및 위치 지정
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/6-4.png" class="solveImage">
+                            <h2>
+                                메모리 할당량 변경
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/6-5.png" class="solveImage">
+                            <h2>
+                                가상 하드 디스크 이름, 위치, 크기 지정
+                            </h2>
+                        </li>
+                        <br>
+                        <li>
+                            <img src="assets/images/6-6.png" class="solveImage">
+                            <h2>
+                                나중에 운영 체제 설치로 변경
+                            </h2>
+                        </li>
+                        
+                    </ol>
+
+                    
+                </div>
+                
+
+
+
+
+
+            </div>
+         
+
+    </div>
+
+
+
+    <script>
+
+        (() => {
+
+            let selectedMenu = 0;
+
+            function selectedMenuChanged() {
+                $("#contentContainer").html("");
+                $("#contentContainer").append(
+                    $(`.contentWrapper[menu=${selectedMenu}]`).html()
+                );
+
+                $(".menu").css("background-color", "#007bff");
+                $(`.menu[menu=${selectedMenu}]`).css("background-color", "purple");
+
+            }
+
+            $(document).ready(function () {
+                selectedMenuChanged();
+            })
+
+            $("#menuContainer").html("");
+
+
+            $("#contentWrapperContainer").hide();
+
+            $('.contentWrapper').each(function (index, item) {
+                $("#menuContainer").append(
+                    `
+                    <div class="menu badge  badge-primary" menu=${index}>
+                        ${index + 1}
+                    </div>
+
+                    `
+
+
+                );
+            })
+
+
+            $(".menu").on("click", function () {
+                selectedMenu = $(this).attr("menu") * 1;
+                selectedMenuChanged();
+            })
+
+
+
+
+
+        })();
+
+    </script>
+
+
+
+</body>
+
+</html>

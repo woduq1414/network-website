@@ -15,13 +15,13 @@ $(function () {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">필기 <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="./page1.html">필기 <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">실기(케이블 만들기)</a>
+          <a class="nav-link" href="./page2.html">실기(케이블 만들기)</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">실기(문제 풀이)</a>
+          <a class="nav-link" href="./page3.html">실기(문제 풀이)</a>
         </li>
 
       </ul>

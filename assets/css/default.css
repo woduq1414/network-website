@@ -96,3 +96,9 @@ html, body, main {
    padding-right: 1rem;
    margin-right: 1rem;
 }
+
+.solveImage {
+    max-width: 500px;
+    /* max-height: 300px; */
+    margin: 0 auto;
+}
